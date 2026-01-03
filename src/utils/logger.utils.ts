@@ -1,3 +1,6 @@
+import * as fs from "fs"
+import * as path from "path"
+
 import { createLogger, format, transports } from "winston"
 
 const { combine, timestamp, printf } = format
@@ -5,6 +8,12 @@ const { combine, timestamp, printf } = format
 const logFormat = printf(({ timestamp, level, message }) => {
   return `${timestamp} [${level}]: ${message}`
 })
+
+const logsDir = path.join(__dirname, "../../logs")
+
+if (!fs.existsSync(logsDir)) {
+  fs.mkdirSync(logsDir, { recursive: true })
+}
 
 // Create a logger instance
 const logger = createLogger({
@@ -14,7 +23,8 @@ const logger = createLogger({
     new transports.File({
       filename: "error.log", // Name of the log file
       level: "error",
-      dirname: "/logs/error.log", // Directory where log files will be stored
+      dirname: "./logs", // Directory where log files will be stored (Shared Hosting)
+      // dirname: "/logs/error.log", // Directory where log files will be stored
       maxsize: 5242880, // Max file size (5MB in bytes)
       maxFiles: 5 // Max number of log files to keep
     })
