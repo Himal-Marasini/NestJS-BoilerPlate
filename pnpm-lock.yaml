@@ -26,6 +26,12 @@ importers:
       '@prisma/client':
         specifier: ^5.22.0
         version: 5.22.0(prisma@5.22.0)
+      '@types/compression':
+        specifier: ^1.8.1
+        version: 1.8.1
+      '@types/express-useragent':
+        specifier: ^1.0.5
+        version: 1.0.5
       class-transformer:
         specifier: ^0.5.1
         version: 0.5.1
@@ -418,6 +424,9 @@ packages:
   '@types/body-parser@1.19.5':
     resolution: {integrity: sha512-fB3Zu92ucau0iQ0JMCFQE7b/dv8Ot07NI3KaZIkIUNXq82k4eBAqUaneXfleGY9JWskeS9y+u0nXMyspcuQrCg==}
 
+  '@types/compression@1.8.1':
+    resolution: {integrity: sha512-kCFuWS0ebDbmxs0AXYn6e2r2nrGAb5KwQhknjSPSPgJcGd8+HVSILlUyFhGqML2gk39HcG7D1ydW9/qpYkN00Q==}
+
   '@types/connect@3.4.38':
     resolution: {integrity: sha512-K6uROf1LD88uDQqJCktA4yzL1YYAK6NgfsI0v/mTgyPKWsX1CnJ0XPSDhViejru1GcRkLWb8RlzFYJRqGUbaug==}
 
@@ -435,6 +444,9 @@ packages:
 
   '@types/express-serve-static-core@5.0.1':
     resolution: {integrity: sha512-CRICJIl0N5cXDONAdlTv5ShATZ4HEwk6kDDIW2/w9qOWKg+NU/5F8wYRWCrONad0/UKkloNSmmyN/wX4rtpbVA==}
+
+  '@types/express-useragent@1.0.5':
+    resolution: {integrity: sha512-G1zPW6jDj7oGJvMvB8UCIAWznCOafcksYzOg8LINfYmvrXlSGJ6nsJ7O7GlmYMjrgGYvobYaI8IhRCkAKslPJA==}
 
   '@types/express@5.0.0':
     resolution: {integrity: sha512-DvZriSMehGHL1ZNLzi6MidnsDhUZM/x2pRdDIKdwbUNqqwHxMlRdkxtn6/EPKyqKpHqTl/4nRZsRNLpZxZRpPQ==}
@@ -2614,6 +2626,11 @@ snapshots:
       '@types/connect': 3.4.38
       '@types/node': 20.17.6
 
+  '@types/compression@1.8.1':
+    dependencies:
+      '@types/express': 5.0.0
+      '@types/node': 20.17.6
+
   '@types/connect@3.4.38':
     dependencies:
       '@types/node': 20.17.6
@@ -2638,6 +2655,10 @@ snapshots:
       '@types/qs': 6.9.17
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.4
+
+  '@types/express-useragent@1.0.5':
+    dependencies:
+      '@types/express': 5.0.0
 
   '@types/express@5.0.0':
     dependencies:
