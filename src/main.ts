@@ -2,7 +2,7 @@ import { ValidationPipe } from "@nestjs/common"
 import { ConfigService } from "@nestjs/config"
 import { NestFactory } from "@nestjs/core"
 import { useContainer } from "class-validator"
-import * as compression from "compression"
+import compression from "compression"
 import * as useragent from "express-useragent"
 import helmet from "helmet"
 
